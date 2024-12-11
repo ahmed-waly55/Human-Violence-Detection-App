@@ -11,10 +11,9 @@ const Register = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // إذا كان المستخدم مسجل دخوله بالفعل، قم بإعادة توجيهه
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate("/"); // إعادة التوجيه إلى الصفحة الرئيسية إذا كان المستخدم مسجل دخوله
+        navigate("/"); 
       }
     });
   }, [navigate]);
@@ -24,7 +23,7 @@ const Register = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       toast.success("Account created successfully!");
-      navigate("/"); // إعادة التوجيه بعد إنشاء الحساب بنجاح
+      navigate("/"); 
     } catch (error) {
       toast.error("Error creating account. Please try again.");
     }
@@ -61,3 +60,4 @@ const Register = () => {
 };
 
 export default Register;
+  

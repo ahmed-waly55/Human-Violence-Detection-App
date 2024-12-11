@@ -11,10 +11,9 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // إذا كان المستخدم مسجل دخوله بالفعل، قم بإعادة توجيهه
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate("/"); // إعادة التوجيه إلى الصفحة الرئيسية إذا كان المستخدم مسجل دخوله
+        navigate("/");
       }
     });
   }, [navigate]);
@@ -24,7 +23,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       toast.success("Logged in successfully!");
-      navigate("/"); // إعادة التوجيه بعد تسجيل الدخول بنجاح
+      navigate("/"); 
     } catch (error) {
       toast.error("Invalid email or password.");
     }

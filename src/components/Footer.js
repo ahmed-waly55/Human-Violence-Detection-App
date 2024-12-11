@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/footer.css";  // استيراد ملف الـ CSS من فولدر css
+import "../css/footer.css";  
 
 const Footer = () => {
   return (

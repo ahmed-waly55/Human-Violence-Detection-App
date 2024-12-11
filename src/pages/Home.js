@@ -11,10 +11,10 @@ const Home = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // ضع Service ID الخاص بك
-        "YOUR_TEMPLATE_ID", // ضع Template ID الخاص بك
+        "YOUR_SERVICE_ID", 
+        "YOUR_TEMPLATE_ID", 
         form.current,
-        "YOUR_PUBLIC_KEY" // ضع Public Key الخاص بك
+        "YOUR_PUBLIC_KEY" 
       )
       .then(
         (result) => {
@@ -29,7 +29,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* قسم المقدمة */}
       <section className="bg-light py-5 text-center">
         <div className="container">
           <h1 className="display-4">Welcome to the Violence Detection App</h1>
@@ -41,7 +40,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* قسم الميزات */}
       <section className="py-5">
         <div className="container text-center">
           <h2 className="mb-4">Features</h2>
@@ -69,7 +67,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* قسم كيفية العمل */}
       <section className="bg-light py-5">
         <div className="container">
           <h2 className="text-center mb-4">How It Works</h2>
@@ -93,7 +90,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* قسم الدعوة للعمل */}
       <section className="py-5 text-center">
         <div className="container">
           <h2 className="mb-3">Get Started Now!</h2>
@@ -109,7 +105,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* نموذج التواصل */}
       <section className="bg-light py-5">
         <div className="container">
           <h2 className="text-center mb-4">Contact Us</h2>

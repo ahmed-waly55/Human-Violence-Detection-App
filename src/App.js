@@ -22,8 +22,8 @@ const App = () => {
 };
 
 const AppContent = () => {
-  const location = useLocation();  // الحصول على المسار الحالي
-
+  const location = useLocation();  
+  
   return (
     <>
       <Navbar />
@@ -35,8 +35,10 @@ const AppContent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-      {/* إخفاء الـ Footer في صفحة Model */}
-      {location.pathname !== "/model" && <Footer />}
+
+      {location.pathname !== "/model" && location.pathname !== "/login" 
+      & location.pathname !== "/register" && <Footer />}
+      
     </>
   );
 };
